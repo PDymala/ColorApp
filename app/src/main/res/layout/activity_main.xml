@@ -16,52 +16,51 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
+
     <SeekBar
         android:id="@+id/seekerbarRed"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="64dp"
 
+        android:layout_marginEnd="32dp"
         android:alpha="0.8"
         android:max="255"
         android:progress="100"
         android:scrollbarSize="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekerbarGreen"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTap" />
 
     <SeekBar
         android:id="@+id/seekerbarGreen"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="24dp"
         android:alpha="0.8"
         android:max="255"
         android:progress="100"
         android:scrollbarSize="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekerbarBlue"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekerbarRed" />
 
     <SeekBar
         android:id="@+id/seekerbarBlue"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="16dp"
 
+        android:layout_marginEnd="32dp"
         android:alpha="0.8"
         android:max="255"
         android:progress="100"
         android:scrollbarSize="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/colored_bar"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekerbarGreen" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewRed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:alpha="0.8"
@@ -72,7 +71,7 @@
         app:layout_constraintTop_toTopOf="@+id/seekerbarRed" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewGreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:alpha="0.8"
@@ -83,7 +82,7 @@
         app:layout_constraintTop_toTopOf="@+id/seekerbarGreen" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:alpha="0.8"
@@ -94,15 +93,28 @@
         app:layout_constraintTop_toTopOf="@+id/seekerbarBlue" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:alpha="0.4"
-        android:text="ColorApp by P. Dymala (p.dymala@gmail.com)"
+        android:alpha="0.7"
+        android:text="ColourScreen"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/colored_bar" />
+
+    <TextView
+        android:id="@+id/textViewTap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:text="Double tap to fullscreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/colored_bar"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
